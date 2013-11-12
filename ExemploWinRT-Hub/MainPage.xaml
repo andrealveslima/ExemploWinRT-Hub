@@ -1,0 +1,62 @@
+﻿<Page
+    x:Class="ExemploWinRT_Hub.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ExemploWinRT_Hub"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0"
+                   Text="Simulação de Panorama"
+                   Margin="25"
+                   Style="{StaticResource HeaderTextBlockStyle}" />
+        <Hub Grid.Row="1"
+             VerticalAlignment="Stretch">
+            <HubSection>
+                <DataTemplate>
+                    <Grid Width="700"
+                          Height="500"
+                          Background="LightGray"
+                          Margin="25">
+                        <TextBlock Text="Primeiro Bloco"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   Style="{StaticResource SubheaderTextBlockStyle}" />
+                    </Grid>
+                </DataTemplate>
+            </HubSection>
+            <HubSection>
+                <DataTemplate>
+                    <Grid Width="450"
+                          Height="500"
+                          Background="DarkGray"
+                          Margin="25">
+                        <TextBlock Text="Segundo Bloco"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   Style="{StaticResource SubheaderTextBlockStyle}" />
+                    </Grid>
+                </DataTemplate>
+            </HubSection>
+            <HubSection>
+                <DataTemplate>
+                    <Grid Width="850"
+                          Height="500"
+                          Background="Gray"
+                          Margin="25">
+                        <TextBlock Text="Terceiro Bloco"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   Style="{StaticResource SubheaderTextBlockStyle}" />
+                    </Grid>
+                </DataTemplate>
+            </HubSection>
+        </Hub>
+    </Grid>
+</Page>
